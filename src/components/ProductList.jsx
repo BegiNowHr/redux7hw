@@ -10,14 +10,6 @@ const ProductList = () => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  if (loading) {
-    return <div>Загрузка...</div>;
-  }
-
-  if (error) {
-    return <div>Произошла ошибка: {error}</div>;
-  }
-
   const productList = Object.values(products);
 
   return (
